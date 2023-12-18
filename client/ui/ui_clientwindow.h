@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'mainwindow.ui'
+** Form generated from reading UI file 'ui/clientwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **
@@ -25,7 +25,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_ClientWindow
 {
 public:
     QWidget *centralwidget;
@@ -237,7 +237,7 @@ public:
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class ClientWindow: public Ui_ClientWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

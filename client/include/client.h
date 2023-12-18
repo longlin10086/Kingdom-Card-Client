@@ -2,23 +2,23 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-#include "../communicator/communicator.h"
+#include "../ui/ui_clientwindow.h"
+#include "../../communicator/communicator.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class ClientWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ClientWindow(QWidget *parent = nullptr);
+    ~ClientWindow();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::ClientWindow *ui;
 
 public slots:
     void ChangeText(SIGNALS signal);

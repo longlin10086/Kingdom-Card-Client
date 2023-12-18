@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'card.ui'
+** Form generated from reading UI file 'ui/card.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **

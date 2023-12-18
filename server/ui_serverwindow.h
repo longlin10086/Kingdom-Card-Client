@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'ServerTest.ui'
+** Form generated from reading UI file 'serverwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **

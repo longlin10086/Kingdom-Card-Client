@@ -16,19 +16,28 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        client/client.cpp
-        client/client.h
-        client/ui_clientwindow.h
+        client/src/client.cpp
+        client/include/client.h
+        client/ui/ui_clientwindow.h
 
         server/ui_serverwindow.h
         server/server.cpp
         server/server
 
-        client/card.cpp
-        client/card
+        client/ui/ui_card.h
+
+        client/ui/ui_startwindow.h
+        client/ui/startwindow.ui
 
         communicator/communicator.cpp
-        communicator/communicator.h)
+        communicator/communicator.h
+
+        client/ui/clientwindow.ui
+
+        client/include/start.h
+        client/src/start.cpp
+
+        res.qrc)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Kingdom-Card
