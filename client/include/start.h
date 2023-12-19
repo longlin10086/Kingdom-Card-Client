@@ -18,6 +18,9 @@ class StartWindow : public QMainWindow
 Q_OBJECT
 
 public:
+    QString account;
+    QString password;
+
     StartWindow(QWidget *parent = nullptr);
     ~StartWindow();
 
@@ -25,7 +28,7 @@ private:
     Ui::StartWindow *ui;
 
 public slots:
-    void ChangeText(SIGNALS signal);
+    void GameStart();
 };
 
 #endif //KINGDOM_CARD_START_H

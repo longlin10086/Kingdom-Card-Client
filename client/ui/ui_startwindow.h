@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'ui/startwindow.ui'
+** Form generated from reading UI file 'startwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **
@@ -13,12 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,7 +28,7 @@ class Ui_StartWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QSpacerItem *verticalSpacer;
@@ -36,10 +36,10 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
-    QTextEdit *Account;
+    QLineEdit *Account;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_3;
-    QTextEdit *Password;
+    QLineEdit *Password;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *GameStart;
     QSpacerItem *horizontalSpacer;
@@ -53,20 +53,19 @@ public:
         StartWindow->resize(800, 600);
         centralwidget = new QWidget(StartWindow);
         centralwidget->setObjectName("centralwidget");
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(20, 10, 751, 531));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(20, 10, 751, 531));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
-
         label->setPixmap(QPixmap(QString::fromUtf8(":/img/start.jpg")));
         label->setAlignment(Qt::AlignCenter);
         label->setWordWrap(false);
@@ -84,15 +83,15 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
         label_2->setMaximumSize(QSize(16777215, 40));
 
         horizontalLayout->addWidget(label_2);
 
-        Account = new QTextEdit(widget);
+        Account = new QLineEdit(layoutWidget);
         Account->setObjectName("Account");
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(Account->sizePolicy().hasHeightForWidth());
@@ -106,13 +105,13 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
         label_3->setMaximumSize(QSize(16777215, 40));
 
         horizontalLayout_2->addWidget(label_3);
 
-        Password = new QTextEdit(widget);
+        Password = new QLineEdit(layoutWidget);
         Password->setObjectName("Password");
         sizePolicy1.setHeightForWidth(Password->sizePolicy().hasHeightForWidth());
         Password->setSizePolicy(sizePolicy1);
@@ -130,7 +129,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_3);
 
-        GameStart = new QPushButton(widget);
+        GameStart = new QPushButton(layoutWidget);
         GameStart->setObjectName("GameStart");
         QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
@@ -147,11 +146,12 @@ public:
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
+        centralwidget->setLayout(verticalLayout_2);
 
         StartWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(StartWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 23));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         StartWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(StartWindow);
         statusbar->setObjectName("statusbar");
