@@ -21,11 +21,17 @@ public:
     ~ServerWindow();
 
 
+
 private slots:
     void ButtonClicked();
+    void BuildConnect(SIGNALS signal);
+    void StopConnect(SIGNALS signal);
 
 private:
     Ui::ServerWindow *ui;
+    bool _is_begin_connect;
+
+
 };
 
 #endif //KINGDOM_CARD_SERVER_H

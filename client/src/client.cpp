@@ -8,6 +8,7 @@ ClientWindow::ClientWindow(QWidget *parent)
     ui->setupUi(this);
 
     connect(&Communicator::communicator(), &Communicator::messageSent, this, &ClientWindow::ChangeText);
+
 }
 
 ClientWindow::~ClientWindow()

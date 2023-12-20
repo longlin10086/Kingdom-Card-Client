@@ -37,7 +37,7 @@ set(PROJECT_SOURCES
         client/include/start.h
         client/src/start.cpp
 
-        res.qrc)
+        res.qrc communicator/commands.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Kingdom-Card

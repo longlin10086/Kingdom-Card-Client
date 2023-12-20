@@ -27,6 +27,8 @@ public:
 private:
     Ui::StartWindow *ui;
 
+    bool _button_toggled;
+
 public slots:
     void GameStart();
 };

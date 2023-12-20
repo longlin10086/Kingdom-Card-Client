@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    ServerWindow ServerWindow;
-//    ServerWindow.setWindowTitle("Server");
-//    ServerWindow.show();
+    ServerWindow ServerWindow;
+    ServerWindow.setWindowTitle("Server");
+    ServerWindow.show();
 //
 //
 //    ClientWindow ClientWindow;
@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     StartWindow.setWindowTitle("Start");
     StartWindow.show();
 
-    // Close
-//    QObject::connect(&a, &QApplication::lastWindowClosed, &a, &QApplication::quit);
+//     Close
+    QObject::connect(&a, &QApplication::lastWindowClosed, &a, &QApplication::quit);
 
     return a.exec();
 }
