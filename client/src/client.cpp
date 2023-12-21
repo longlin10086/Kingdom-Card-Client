@@ -7,7 +7,8 @@ ClientWindow::ClientWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(&Communicator::communicator(), &Communicator::messageSent, this, &ClientWindow::ChangeText);
+    connect(&Communicator::communicator(), &Communicator::messageSent, this, &ClientWindow::StartGame);
+    connect(&Communicator::communicator(), &Communicator::messageSent, this, &ClientWindow::ShowWindow);
 
 }
 
@@ -16,7 +17,19 @@ ClientWindow::~ClientWindow()
     delete ui;
 }
 
-void ClientWindow::ChangeText(SIGNALS signal) {
-    if (signal == SIGNALS::GAME_START) ui->label->setText("----------------------------");
+void ClientWindow::StartGame(SIGNALS signal) {
+    if (signal == SIGNALS::GAME_START){
+
+        for (int i = 0; i < CARD_ORIGIN_NUM; ++i) {
+            CardsInHand.emplace_back(new Card());
+            ui->CardBox->addWidget(CardsInHand[i].get());
+        }
+    }
+}
+
+void ClientWindow::ShowWindow(SIGNALS signal) {
+    if (signal == SIGNALS::CONNECT_REP) {
+        this->show();
+    }
 }
 

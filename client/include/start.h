@@ -31,6 +31,7 @@ private:
 
 public slots:
     void GameStart();
+    void ShutDown(SIGNALS signal);
 };
 
 #endif //KINGDOM_CARD_START_H

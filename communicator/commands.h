@@ -20,13 +20,13 @@ enum SIGNALS {
     DISCARD_CARD,
     ACTION_PLAY,
     ACTION_PASS,
-    CONNECT_REQ,
+
     CONNECT_REP,
     CONNECT_ACK,
     KICK,
 
     // client signals
-    CONNECT_REQUEST,
+    CONNECT_REQ,
     CONNECT_INTERRUPTED,
 };
 

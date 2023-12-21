@@ -15,6 +15,9 @@ StartWindow::StartWindow(QWidget *parent)
     _button_toggled = false;
 
     connect(ui->GameStart, &QPushButton::clicked, this, &StartWindow::GameStart);
+    connect(&Communicator::communicator(), &Communicator::messageSent, this, &StartWindow::ShutDown);
+
+
 }
 
 StartWindow::~StartWindow()
@@ -30,8 +33,9 @@ void StartWindow::GameStart() {
             ui->Account->setReadOnly(true);
             ui->Password->setReadOnly(true);
 
-            Communicator::communicator().sendSignal(SIGNALS::CONNECT_REQUEST);
+            Communicator::communicator().sendSignal(SIGNALS::CONNECT_REQ);
             ui->GameStart->setText("取消连接");
+            ui->status_text->setText("等待服务器进行连接");
         } else {
             QMessageBox warning;
             warning.setText("账号密码不能为空");
@@ -43,8 +47,14 @@ void StartWindow::GameStart() {
         ui->Account->setReadOnly(false);
         ui->Password->setReadOnly(false);
         ui->GameStart->setText("开始游戏");
-
+        ui->status_text->setText("");
         _button_toggled = false;
+    }
+}
+
+void StartWindow::ShutDown(SIGNALS signal) {
+    if (signal == SIGNALS::CONNECT_REP and _button_toggled){
+        this->hide();
     }
 }
 

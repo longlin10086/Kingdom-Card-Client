@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'ui/clientwindow.ui'
+** Form generated from reading UI file 'clientwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_MAINWINDOW_H
-#define UI_MAINWINDOW_H
+#ifndef UI_CLIENTWINDOW_H
+#define UI_CLIENTWINDOW_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -37,7 +37,7 @@ public:
     QLabel *label_12;
     QProgressBar *progressBar;
     QComboBox *comboBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
@@ -56,6 +56,8 @@ public:
     QLabel *label_7;
     QLabel *label_8;
     QLabel *label_9;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *CardBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -63,7 +65,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1077, 802);
+        MainWindow->resize(1094, 804);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         layoutWidget_3 = new QWidget(centralwidget);
@@ -104,32 +106,32 @@ public:
         comboBox = new QComboBox(centralwidget);
         comboBox->setObjectName("comboBox");
         comboBox->setGeometry(QRect(950, 520, 69, 22));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(120, 50, 841, 261));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(120, 50, 841, 261));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
 
         verticalLayout->addWidget(pushButton);
 
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
 
         verticalLayout->addWidget(label_3);
 
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
 
         verticalLayout->addWidget(label);
 
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
 
         verticalLayout->addWidget(label_2);
@@ -143,24 +145,24 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        pushButton_4 = new QPushButton(widget);
+        pushButton_4 = new QPushButton(layoutWidget);
         pushButton_4->setObjectName("pushButton_4");
         sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
         pushButton_4->setSizePolicy(sizePolicy);
 
         verticalLayout_2->addWidget(pushButton_4);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName("label_4");
 
         verticalLayout_2->addWidget(label_4);
 
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName("label_5");
 
         verticalLayout_2->addWidget(label_5);
 
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName("label_6");
 
         verticalLayout_2->addWidget(label_6);
@@ -174,24 +176,24 @@ public:
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName("verticalLayout_3");
-        pushButton_5 = new QPushButton(widget);
+        pushButton_5 = new QPushButton(layoutWidget);
         pushButton_5->setObjectName("pushButton_5");
         sizePolicy.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
         pushButton_5->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(pushButton_5);
 
-        label_7 = new QLabel(widget);
+        label_7 = new QLabel(layoutWidget);
         label_7->setObjectName("label_7");
 
         verticalLayout_3->addWidget(label_7);
 
-        label_8 = new QLabel(widget);
+        label_8 = new QLabel(layoutWidget);
         label_8->setObjectName("label_8");
 
         verticalLayout_3->addWidget(label_8);
 
-        label_9 = new QLabel(widget);
+        label_9 = new QLabel(layoutWidget);
         label_9->setObjectName("label_9");
 
         verticalLayout_3->addWidget(label_9);
@@ -199,10 +201,16 @@ public:
 
         horizontalLayout->addLayout(verticalLayout_3);
 
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
+        horizontalLayoutWidget->setGeometry(QRect(210, 560, 811, 181));
+        CardBox = new QHBoxLayout(horizontalLayoutWidget);
+        CardBox->setObjectName("CardBox");
+        CardBox->setContentsMargins(0, 0, 0, 0);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1077, 21));
+        menubar->setGeometry(QRect(0, 0, 1094, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -242,4 +250,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // UI_MAINWINDOW_H
+#endif // UI_CLIENTWINDOW_H

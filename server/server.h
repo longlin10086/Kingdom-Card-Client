@@ -23,13 +23,15 @@ public:
 
 
 private slots:
-    void ButtonClicked();
+    void ConnectRep();
     void BuildConnect(SIGNALS signal);
     void StopConnect(SIGNALS signal);
+    void GameStart();
 
 private:
     Ui::ServerWindow *ui;
     bool _is_begin_connect;
+    bool _is_game_start;
 
 
 };

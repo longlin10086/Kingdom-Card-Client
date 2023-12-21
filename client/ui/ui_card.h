@@ -16,7 +16,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form{
+class Ui_Card{
 public:
         QPushButton *Card;
 
@@ -43,7 +43,7 @@ public:
     };
 
 namespace Ui {
-        class Form: public Ui_Form {};
+        class Card: public Ui_Card {};
     } // namespace Ui
 
 QT_END_NAMESPACE

@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
     ServerWindow.show();
 //
 //
-//    ClientWindow ClientWindow;
-//    ClientWindow.setWindowTitle("Client");
-//    ClientWindow.show();
+    ClientWindow ClientWindow;
+    ClientWindow.setWindowTitle("Client");
+    ClientWindow.hide();
 
     StartWindow StartWindow;
     StartWindow.setWindowTitle("Start");

@@ -23,8 +23,10 @@ set(PROJECT_SOURCES
         server/ui_serverwindow.h
         server/server.cpp
         server/server
+        server/serverwindow.ui
 
         client/ui/ui_card.h
+        client/ui/card.ui
 
         client/ui/ui_startwindow.h
         client/ui/startwindow.ui
@@ -37,7 +39,7 @@ set(PROJECT_SOURCES
         client/include/start.h
         client/src/start.cpp
 
-        res.qrc communicator/commands.h)
+        res.qrc communicator/commands.h client/include/card.h client/src/card.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Kingdom-Card

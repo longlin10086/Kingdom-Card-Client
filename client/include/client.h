@@ -2,8 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
+#include <vector>
+#include <memory>
+
 #include "../ui/ui_clientwindow.h"
 #include "../../communicator/communicator.h"
+#include "card.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,7 +26,12 @@ public:
 private:
     Ui::ClientWindow *ui;
 
+    std::vector<std::unique_ptr<Card>> CardsInHand;
+
+    const int CARD_ORIGIN_NUM = 4;
+
 public slots:
-    void ChangeText(SIGNALS signal);
+    void StartGame(SIGNALS signal);
+    void ShowWindow(SIGNALS signal);
 };
 #endif // MAINWINDOW_H

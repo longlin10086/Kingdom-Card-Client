@@ -32,6 +32,8 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QSpacerItem *verticalSpacer;
+    QLabel *slogan;
+    QLabel *status_text;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -76,6 +78,24 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Preferred);
 
         verticalLayout_2->addItem(verticalSpacer);
+
+        slogan = new QLabel(layoutWidget);
+        slogan->setObjectName("slogan");
+        QFont font;
+        font.setPointSize(20);
+        slogan->setFont(font);
+        slogan->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(slogan);
+
+        status_text = new QLabel(layoutWidget);
+        status_text->setObjectName("status_text");
+        QFont font1;
+        font1.setPointSize(15);
+        status_text->setFont(font1);
+        status_text->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(status_text);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
@@ -166,6 +186,8 @@ public:
     {
         StartWindow->setWindowTitle(QCoreApplication::translate("StartWindow", "MainWindow", nullptr));
         label->setText(QString());
+        slogan->setText(QCoreApplication::translate("StartWindow", "\344\270\211\345\233\275\346\235\200", nullptr));
+        status_text->setText(QString());
         label_2->setText(QCoreApplication::translate("StartWindow", "\347\231\273\345\275\225IP\357\274\232", nullptr));
         label_3->setText(QCoreApplication::translate("StartWindow", "\345\257\206\347\240\201\357\274\232", nullptr));
         GameStart->setText(QCoreApplication::translate("StartWindow", "\345\274\200\345\247\213\346\270\270\346\210\217", nullptr));
