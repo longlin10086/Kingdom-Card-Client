@@ -39,7 +39,7 @@ set(PROJECT_SOURCES
         client/include/start.h
         client/src/start.cpp
 
-        res.qrc communicator/commands.h client/include/card.h client/src/card.cpp)
+        res.qrc communicator/commands.h client/include/card.h client/src/card.cpp utils/utils.cpp utils/utils.h client/include/player.h client/src/player.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Kingdom-Card

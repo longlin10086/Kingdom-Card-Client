@@ -6,6 +6,7 @@
 #define KINGDOM_CARD_COMMANDS_H
 
 
+
 enum SIGNALS {
 
     // server signals
@@ -28,6 +29,7 @@ enum SIGNALS {
     // client signals
     CONNECT_REQ,
     CONNECT_INTERRUPTED,
+    HAND_CARD,
 };
 
 

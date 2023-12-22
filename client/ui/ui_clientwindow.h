@@ -16,9 +16,9 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -30,74 +30,63 @@ class Ui_ClientWindow
 public:
     QWidget *centralwidget;
     QWidget *layoutWidget_3;
-    QVBoxLayout *verticalLayout_4;
-    QPushButton *pushButton_2;
-    QLabel *label_10;
-    QLabel *label_11;
-    QLabel *label_12;
+    QVBoxLayout *Self;
+    QPushButton *SelfCard;
+    QLabel *SelfName;
+    QLabel *SelfHP;
+    QLabel *SelfIdentity;
     QProgressBar *progressBar;
     QComboBox *comboBox;
-    QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QLabel *label_3;
-    QLabel *label;
-    QLabel *label_2;
-    QSpacerItem *horizontalSpacer;
-    QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton_4;
-    QLabel *label_4;
-    QLabel *label_5;
-    QLabel *label_6;
-    QSpacerItem *horizontalSpacer_2;
-    QVBoxLayout *verticalLayout_3;
-    QPushButton *pushButton_5;
-    QLabel *label_7;
-    QLabel *label_8;
-    QLabel *label_9;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *CardBox;
+    QPlainTextEdit *GameTable;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *PlayerBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *ClientWindow)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1094, 804);
-        centralwidget = new QWidget(MainWindow);
+        if (ClientWindow->objectName().isEmpty())
+            ClientWindow->setObjectName("ClientWindow");
+        ClientWindow->resize(1094, 804);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ClientWindow->sizePolicy().hasHeightForWidth());
+        ClientWindow->setSizePolicy(sizePolicy);
+        centralwidget = new QWidget(ClientWindow);
         centralwidget->setObjectName("centralwidget");
         layoutWidget_3 = new QWidget(centralwidget);
         layoutWidget_3->setObjectName("layoutWidget_3");
         layoutWidget_3->setGeometry(QRect(0, 520, 131, 239));
-        verticalLayout_4 = new QVBoxLayout(layoutWidget_3);
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        pushButton_2 = new QPushButton(layoutWidget_3);
-        pushButton_2->setObjectName("pushButton_2");
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy);
+        Self = new QVBoxLayout(layoutWidget_3);
+        Self->setObjectName("Self");
+        Self->setContentsMargins(0, 0, 0, 0);
+        SelfCard = new QPushButton(layoutWidget_3);
+        SelfCard->setObjectName("SelfCard");
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(SelfCard->sizePolicy().hasHeightForWidth());
+        SelfCard->setSizePolicy(sizePolicy1);
 
-        verticalLayout_4->addWidget(pushButton_2);
+        Self->addWidget(SelfCard);
 
-        label_10 = new QLabel(layoutWidget_3);
-        label_10->setObjectName("label_10");
+        SelfName = new QLabel(layoutWidget_3);
+        SelfName->setObjectName("SelfName");
 
-        verticalLayout_4->addWidget(label_10);
+        Self->addWidget(SelfName);
 
-        label_11 = new QLabel(layoutWidget_3);
-        label_11->setObjectName("label_11");
+        SelfHP = new QLabel(layoutWidget_3);
+        SelfHP->setObjectName("SelfHP");
 
-        verticalLayout_4->addWidget(label_11);
+        Self->addWidget(SelfHP);
 
-        label_12 = new QLabel(layoutWidget_3);
-        label_12->setObjectName("label_12");
+        SelfIdentity = new QLabel(layoutWidget_3);
+        SelfIdentity->setObjectName("SelfIdentity");
 
-        verticalLayout_4->addWidget(label_12);
+        Self->addWidget(SelfIdentity);
 
         progressBar = new QProgressBar(centralwidget);
         progressBar->setObjectName("progressBar");
@@ -106,140 +95,47 @@ public:
         comboBox = new QComboBox(centralwidget);
         comboBox->setObjectName("comboBox");
         comboBox->setGeometry(QRect(950, 520, 69, 22));
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(120, 50, 841, 261));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        pushButton = new QPushButton(layoutWidget);
-        pushButton->setObjectName("pushButton");
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
-
-        verticalLayout->addWidget(pushButton);
-
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName("label_3");
-
-        verticalLayout->addWidget(label_3);
-
-        label = new QLabel(layoutWidget);
-        label->setObjectName("label");
-
-        verticalLayout->addWidget(label);
-
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName("label_2");
-
-        verticalLayout->addWidget(label_2);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        pushButton_4 = new QPushButton(layoutWidget);
-        pushButton_4->setObjectName("pushButton_4");
-        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy);
-
-        verticalLayout_2->addWidget(pushButton_4);
-
-        label_4 = new QLabel(layoutWidget);
-        label_4->setObjectName("label_4");
-
-        verticalLayout_2->addWidget(label_4);
-
-        label_5 = new QLabel(layoutWidget);
-        label_5->setObjectName("label_5");
-
-        verticalLayout_2->addWidget(label_5);
-
-        label_6 = new QLabel(layoutWidget);
-        label_6->setObjectName("label_6");
-
-        verticalLayout_2->addWidget(label_6);
-
-
-        horizontalLayout->addLayout(verticalLayout_2);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_2);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        pushButton_5 = new QPushButton(layoutWidget);
-        pushButton_5->setObjectName("pushButton_5");
-        sizePolicy.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy);
-
-        verticalLayout_3->addWidget(pushButton_5);
-
-        label_7 = new QLabel(layoutWidget);
-        label_7->setObjectName("label_7");
-
-        verticalLayout_3->addWidget(label_7);
-
-        label_8 = new QLabel(layoutWidget);
-        label_8->setObjectName("label_8");
-
-        verticalLayout_3->addWidget(label_8);
-
-        label_9 = new QLabel(layoutWidget);
-        label_9->setObjectName("label_9");
-
-        verticalLayout_3->addWidget(label_9);
-
-
-        horizontalLayout->addLayout(verticalLayout_3);
-
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
         horizontalLayoutWidget->setGeometry(QRect(210, 560, 811, 181));
         CardBox = new QHBoxLayout(horizontalLayoutWidget);
         CardBox->setObjectName("CardBox");
         CardBox->setContentsMargins(0, 0, 0, 0);
-        MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
+        GameTable = new QPlainTextEdit(centralwidget);
+        GameTable->setObjectName("GameTable");
+        GameTable->setGeometry(QRect(110, 330, 861, 171));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(GameTable->sizePolicy().hasHeightForWidth());
+        GameTable->setSizePolicy(sizePolicy2);
+        horizontalLayoutWidget_2 = new QWidget(centralwidget);
+        horizontalLayoutWidget_2->setObjectName("horizontalLayoutWidget_2");
+        horizontalLayoutWidget_2->setGeometry(QRect(110, 30, 861, 281));
+        PlayerBox = new QHBoxLayout(horizontalLayoutWidget_2);
+        PlayerBox->setObjectName("PlayerBox");
+        PlayerBox->setContentsMargins(0, 0, 0, 0);
+        ClientWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(ClientWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 1094, 21));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
+        ClientWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(ClientWindow);
         statusbar->setObjectName("statusbar");
-        MainWindow->setStatusBar(statusbar);
+        ClientWindow->setStatusBar(statusbar);
 
-        retranslateUi(MainWindow);
+        retranslateUi(ClientWindow);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(ClientWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QMainWindow *ClientWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_11->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_8->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_9->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        ClientWindow->setWindowTitle(QCoreApplication::translate("ClientWindow", "MainWindow", nullptr));
+        SelfCard->setText(QCoreApplication::translate("ClientWindow", "PushButton", nullptr));
+        SelfName->setText(QCoreApplication::translate("ClientWindow", "TextLabel", nullptr));
+        SelfHP->setText(QCoreApplication::translate("ClientWindow", "TextLabel", nullptr));
+        SelfIdentity->setText(QCoreApplication::translate("ClientWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

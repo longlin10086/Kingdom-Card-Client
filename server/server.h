@@ -5,8 +5,12 @@
 #ifndef KINGDOM_CARD_SERVER_H
 #define KINGDOM_CARD_SERVER_H
 
-#include <QMainWindow>
+#include "./ui_serverwindow.h"
 #include "../communicator/communicator.h"
+
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class ServerWindow; }
@@ -24,6 +28,10 @@ public:
 
 private slots:
     void ConnectRep();
+    void ConnectACK();
+    void GameStatus();
+
+
     void BuildConnect(SIGNALS signal);
     void StopConnect(SIGNALS signal);
     void GameStart();

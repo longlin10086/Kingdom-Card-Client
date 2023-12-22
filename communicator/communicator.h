@@ -6,7 +6,7 @@
 #define KINGDOM_CARD_COMMUNICATOR_H
 
 #include "commands.h"
-
+#include "../utils/utils.h"
 #include <QObject>
 
 

@@ -53,7 +53,7 @@ void StartWindow::GameStart() {
 }
 
 void StartWindow::ShutDown(SIGNALS signal) {
-    if (signal == SIGNALS::CONNECT_REP and _button_toggled){
+    if (signal == SIGNALS::CONNECT_ACK and _button_toggled){
         this->hide();
     }
 }

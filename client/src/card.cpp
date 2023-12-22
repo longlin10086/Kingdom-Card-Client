@@ -9,7 +9,7 @@ void Card::SetImage() {
 }
 
 void Card::SetupUi() {
-    this->setGeometry(QRect(140, 90, 100, 180));
+    this->setFixedSize(120, 180);
 
 }
 
